@@ -1,0 +1,17 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "fetch-just-once"
+main = "main.ts"
+compatibility_date = "2024-12-18"
+
+[observability]
+enabled = true
+
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#durable-objects
+[[durable_objects.bindings]]
+name = "URL_FETCHER_DO"
+class_name = "URLFetcherDO"
+
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#migrations
+[[migrations]]
+tag = "v1"
+new_classes = ["URLFetcherDO"]
