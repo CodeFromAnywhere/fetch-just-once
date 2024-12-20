@@ -1,4 +1,4 @@
-This worker demonstrates the capability of durable objects to share promises.
+This worker demonstrates the capability of [CloudFlare Durable Objects](https://developers.cloudflare.com/workers/wrangler/configuration/#durable-objects) to share promises.
 
 Suppose we have [this URL](https://durable-object-starter.githuq.workers.dev) where a counter increases every time you fetch it: https://durable-object-starter.githuq.workers.dev
 
