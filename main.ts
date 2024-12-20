@@ -51,12 +51,7 @@ export class URLFetcherDO extends DurableObject {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		const url = new URL(request.url).searchParams.get('url');
-		if (!url) {
-			return new Response('No URL provided', { status: 400 });
-		}
-
-		const id = env.URL_FETCHER_DO.idFromName(url);
+		const id = env.URL_FETCHER_DO.idFromName('URLFetcherDO');
 		const stub = env.URL_FETCHER_DO.get(id);
 		return stub.fetch(request);
 	},
