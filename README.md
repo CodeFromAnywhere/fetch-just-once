@@ -6,4 +6,6 @@ Now suppose this URL costs us $1.00 every time we call it. We better not call it
 
 Cloudflare Durable Objects to the rescue. In this simple example, the fetch Response Promise is saved to the durable object, and reused across parallel worker calls, so the URL only gets called once, even if 100 users request it at the same time.
 
+# Watch te demo
+
 [![](placeholder.png)](https://github.com/CodeFromAnywhere/fetch-just-once/raw/refs/heads/main/demo720.mov)
